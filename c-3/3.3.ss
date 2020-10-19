@@ -9,6 +9,7 @@
     (set! balance (+ balance amount))
     balance)
 
+  ;; 在调用方法前 验证密码即可
   (define (dispatch pwd m)
     (if (eq? pwd password)
         (cond ((eq? m 'withdraw) withdraw)
